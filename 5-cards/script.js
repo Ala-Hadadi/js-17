@@ -6,6 +6,7 @@
 // todo-4: Each card should have a button; when clicked, the card title should be displayed on the element with the class "cardSelected".
 
 const wrapper = document.querySelector(".cards");
+const selectedCard = document.querySelector(".cardSelected");
 const data = [
   {
     id: 1,
@@ -42,3 +43,50 @@ const data = [
 ];
 
 // !Answer:
+
+// ایجاد کارت برای هر داده در آرایه
+data.forEach(item => {
+  // ایجاد عناصر HTML برای کارت
+  const card = document.createElement("div");
+  card.classList.add("card");
+
+  const img = document.createElement("img");
+  img.src = item.src;
+  img.alt = item.title;
+
+  const cardContent = document.createElement("div");
+  cardContent.classList.add("card-content");
+
+  const title = document.createElement("h3");
+  title.classList.add("card-title");
+  title.textContent = item.title;
+
+  const account = document.createElement("div");
+  account.classList.add("card-account");
+
+  const accountImg = document.createElement("img");
+  accountImg.src = "avt-12.jpg";
+
+  const accountName = document.createElement("span");
+  accountName.classList.add("card-account-name");
+  accountName.textContent = item.account;
+
+  const button = document.createElement("button");
+  button.textContent = "Please Bid";
+  
+  button.addEventListener("click", () => {
+    selectedCard.textContent = `You selected ${item.title}`;
+  });
+
+  account.appendChild(accountImg);
+  account.appendChild(accountName);
+  
+  cardContent.appendChild(title);
+  cardContent.appendChild(account);
+  cardContent.appendChild(button);
+  
+  card.appendChild(img);
+  card.appendChild(cardContent);
+  
+  wrapper.appendChild(card);
+});

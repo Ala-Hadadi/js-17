@@ -1,0 +1,91 @@
+body {
+    background-color: #000000;
+    color: #fffefe;
+}
+ 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+.card {
+  background-color: #141414;
+  border: 1px solid #181818 ;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 280px;
+  text-align: center;
+}
+
+.card img {
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-self: center;
+  margin-top: 1rem;
+  border-radius: 12px;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.card-account {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.card-account img {
+  width: 40px;
+  height: 40px;
+}
+ .card-account :hover {
+    border-radius: 50%;
+ }
+
+.card-account-name {
+  font-size: 14px;
+  color: #fffefe;
+  display: flex;
+}
+
+.card button {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border: #690ea5 solid 2px;
+  border-radius: 20px;
+  display: flex;
+  justify-self: flex-end;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.card button:hover {
+  background-color: #690ea5;
+}
+
+.cardSelected {
+  margin: 20px;
+  padding: 15px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
